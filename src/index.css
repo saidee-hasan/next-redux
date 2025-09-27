@@ -1,0 +1,122 @@
+/* Todo.css */
+
+/* Body / Main Container */
+.todo-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 20px;
+  background-color: #ffffff; /* white background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000; /* black text */
+}
+
+/* Heading */
+.todo-container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Input & Button Row */
+.todo-input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.todo-input-row input {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc; /* light grey border */
+  outline: none;
+  font-size: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* subtle shadow */
+  background-color: #f5f5f5; /* light grey input */
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.todo-input-row input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.todo-input-row button {
+  padding: 12px 25px;
+  background: #e0e0e0; /* grey button */
+  color: #000;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.todo-input-row button:hover {
+  background: #d0d0d0;
+  transform: scale(1.02);
+}
+
+/* Todo List Container */
+.todo-list {
+  width: 360px;
+  max-height: 450px;
+  overflow-y: auto;
+  background: #f9f9f9; /* light grey list */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Scrollbar Styling */
+.todo-list::-webkit-scrollbar {
+  width: 8px;
+}
+.todo-list::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* grey scrollbar */
+  border-radius: 4px;
+}
+
+/* Todo Item */
+.todo-item {
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #e0e0e0; /* grey item */
+  color: #000;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  background-color: #c0c0c0; /* darker grey for completed */
+}
+
+/* Hover effect */
+.todo-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .todo-container h1 {
+    font-size: 2.2rem;
+  }
+  .todo-input-row input {
+    width: 200px;
+  }
+  .todo-list {
+    width: 90%;
+  }
+}
